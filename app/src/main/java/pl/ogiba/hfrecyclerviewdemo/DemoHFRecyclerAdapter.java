@@ -18,6 +18,8 @@ public class DemoHFRecyclerAdapter extends HFRecyclerView.HFAdapter<DemoHFViewHo
 
     public DemoHFRecyclerAdapter() {
         this.items = new ArrayList<>();
+
+        items.add(new Object());
     }
 
     @Override
@@ -26,14 +28,19 @@ public class DemoHFRecyclerAdapter extends HFRecyclerView.HFAdapter<DemoHFViewHo
     }
 
     @Override
-    public DemoHFViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    protected DemoHFViewHolder onCreateHeaderViewHolder(ViewGroup parent) {
+        return null;
+    }
+
+    @Override
+    protected DemoHFViewHolder onCreateContentViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.demo_hf_item, parent, false);
         return new DemoHFViewHolder(view);
     }
 
     @Override
-    protected void onCreateHeader(ViewGroup parent) {
-
+    protected DemoHFViewHolder onCreateFooterViewHolder(ViewGroup parent) {
+        return null;
     }
 
     @Override

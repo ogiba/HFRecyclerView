@@ -7,6 +7,7 @@
     tools:context="pl.ogiba.hfrecyclerviewdemo.MainActivity">
 
     <pl.ogiba.hfrecyclerview.HFRecyclerView
+        android:id="@+id/rv_header_footer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
